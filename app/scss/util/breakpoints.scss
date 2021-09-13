@@ -1,0 +1,30 @@
+
+// BREAKPONTS 
+$breakpoints: (
+  'sm-phone': '23.4375em', // 375px 
+  'phone': '37.5em', // 600px
+  'tab-port': '56.25em', //  900px
+  'tab-land': '75em', // 1200 px
+);
+
+@mixin respond($size) {
+  @media (max-width: map-get($breakpoints, $size )) {
+    @content;
+  };
+
+  @if $size == big-desktop {
+    @media (min-width: 112.5em) {
+      // Up > 1800px 
+      @content;
+    };
+  }; 
+};
+
+
+
+
+
+
+
+
+
