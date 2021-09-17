@@ -7,6 +7,13 @@
   background-position: top -43rem left -1rem , bottom -50rem right -2.4rem;
   background-repeat: no-repeat;
   
+  //Phone Landscape:
+  @include respond(phone-landscape) {
+    background-size: 50rem;
+    background-position: top -23rem left -28rem, bottom -21rem right -24rem; 
+  }
+  
+  // Small Phone:
   @include respond(sm-phone) {
     background-size: 50rem;
     background-position: top -26rem left -29rem, bottom -20rem right -31rem; 
@@ -22,7 +29,14 @@
   border-radius: 1.6rem;
   cursor: pointer;
   overflow: hidden;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
 
+  // Phone Landscape:
+  @include respond(phone-landscape) {
+    width: 30rem;   
+  }
+
+  // Small Phone:
   @include respond(sm-phone) {
     width: 33rem;   
   }
